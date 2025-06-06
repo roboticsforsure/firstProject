@@ -89,7 +89,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <StateMachine InitialState="{x:Reference __ReferenceID4}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="1293,786.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <StateMachine InitialState="{x:Reference __ReferenceID4}" DisplayName="State Machine" sap:VirtualizedContainerService.HintSize="600,648" sap2010:WorkflowViewState.IdRef="StateMachine_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,9 +177,7 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">30</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="userInput&lt;=2" />
-                    </Transition.Condition>
+                    <Transition.Condition>[userInput&lt;=2]</Transition.Condition>
                     <Transition.To>
                       <State x:Name="__ReferenceID2" DisplayName="correct guess" sap:VirtualizedContainerService.HintSize="180,90" sap2010:WorkflowViewState.IdRef="State_8">
                         <State.Entry>
@@ -204,9 +202,17 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <Transition.To>
-                              <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="180,70" sap2010:WorkflowViewState.IdRef="State_9" IsFinal="True">
+                              <State x:Name="__ReferenceID3" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="462,399" sap2010:WorkflowViewState.IdRef="State_9" IsFinal="True">
                                 <State.Entry>
-                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;you are win &quot;]" />
+                                  <Sequence sap:VirtualizedContainerService.HintSize="416,285" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;you are win &quot;]" />
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;this project is push into the git &quot;]" />
+                                  </Sequence>
                                 </State.Entry>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -232,9 +238,7 @@
                         <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Transition.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="userInput&gt;2" />
-                    </Transition.Condition>
+                    <Transition.Condition>[userInput&gt;2]</Transition.Condition>
                     <Transition.To>
                       <State x:Name="__ReferenceID1" DisplayName="wrong guess" sap:VirtualizedContainerService.HintSize="180,80" sap2010:WorkflowViewState.IdRef="State_7">
                         <State.Entry>
